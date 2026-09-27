@@ -1,0 +1,148 @@
+<style>
+.tg{--pine:#1F3B2C;--deep:#132018;--wood:#8B5E34;--paper:#F5F1EA;--steel:#8A9296;--amb:#E08A1E;
+font-family:'Onest','Golos Text',-apple-system,'Helvetica Neue',Arial,sans-serif;color:var(--paper);
+background:var(--deep);-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.5}
+.tg *{box-sizing:border-box;margin:0;padding:0}
+.tg-w{max-width:1120px;margin:0 auto;padding:0 24px}
+.tg-hero{background:radial-gradient(120% 90% at 85% -10%,rgba(31,59,44,.9),rgba(19,32,24,0) 62%),
+radial-gradient(90% 70% at -5% 110%,rgba(92,61,36,.38),rgba(19,32,24,0) 60%),var(--deep);
+padding:92px 0 78px;text-align:center;border-bottom:1px solid rgba(245,241,234,.1)}
+.tg-mark{font-size:13px;letter-spacing:.42em;color:var(--steel);text-transform:uppercase;margin-bottom:26px}
+.tg-h1{font-size:clamp(34px,6vw,62px);line-height:1.04;font-weight:800;letter-spacing:-.03em;margin-bottom:20px}
+.tg-h1 span{color:var(--amb)}
+.tg-lead{font-size:clamp(15px,2.2vw,19px);line-height:1.55;color:rgba(245,241,234,.78);max-width:660px;margin:0 auto 34px}
+.tg-btn{display:inline-block;background:var(--amb);color:#1a1200;font-weight:700;font-size:16px;
+padding:17px 38px;border-radius:8px;text-decoration:none;transition:.2s}
+.tg-btn:hover{background:#f09a2c;color:#1a1200}
+.tg-btn2{display:inline-block;border:1px solid rgba(245,241,234,.3);color:var(--paper);font-weight:600;
+font-size:15px;padding:16px 30px;border-radius:8px;text-decoration:none;margin-left:10px;transition:.2s}
+.tg-btn2:hover{border-color:var(--paper)}
+.tg-sec{padding:76px 0;border-bottom:1px solid rgba(245,241,234,.08)}
+.tg-eye{font-size:11.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--steel);margin-bottom:14px;text-align:center}
+.tg-h2{font-size:clamp(26px,4vw,40px);font-weight:800;letter-spacing:-.02em;text-align:center;margin-bottom:12px}
+.tg-sub{text-align:center;color:rgba(245,241,234,.66);font-size:15px;margin-bottom:46px;max-width:700px;margin-left:auto;margin-right:auto}
+
+/* модели */
+.tg-model{padding:30px 0;border-bottom:1px solid rgba(245,241,234,.08)}
+.tg-model:last-child{border-bottom:none}
+.tg-model.rev>.tg-ph{order:2}
+.tg-ph{border-radius:14px;overflow:hidden;background:#0d1611;border:1px solid rgba(245,241,234,.12)}
+.tg-ph img{width:100%;height:auto;display:block}
+.tg-mt{font-size:clamp(24px,3.4vw,34px);font-weight:800;letter-spacing:-.02em;margin-bottom:6px}
+.tg-mrole{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amb);margin-bottom:14px}
+.tg-mdesc{font-size:15.5px;line-height:1.6;color:rgba(245,241,234,.8);margin-bottom:18px}
+.tg-mli{position:relative;padding-left:24px;font-size:15px;line-height:1.5;color:rgba(245,241,234,.82);margin-bottom:8px}
+.tg-mli:before{content:'';position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:2px;background:var(--wood)}
+.tg-mprice{margin-top:20px;font-size:19px;font-weight:700;color:var(--amb)}
+.tg-mprice small{display:block;font-size:13px;font-weight:400;color:var(--steel);margin-top:4px}
+
+.tg-mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px 28px;margin-top:4px}
+/* прайс */
+.tg-table{width:100%;border-collapse:collapse;font-size:15.5px;max-width:840px;margin:0 auto}
+.tg-table th{text-align:left;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);
+font-weight:700;padding:0 16px 12px;border-bottom:1px solid rgba(245,241,234,.18)}
+.tg-table td{padding:14px 16px;border-bottom:1px solid rgba(245,241,234,.08);vertical-align:middle}
+.tg-table td.p{text-align:right;font-weight:700;color:var(--amb);white-space:nowrap}
+.tg-table td.c{color:rgba(245,241,234,.7);white-space:nowrap}
+.tg-table tr.hl td{background:rgba(224,138,30,.08)}
+.tg-table tr.hl td:first-child{font-weight:600}
+
+/* списки */
+.tg-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px 44px;max-width:940px;margin:0 auto}
+.tg-box{background:rgba(245,241,234,.04);border:1px solid rgba(245,241,234,.12);border-radius:14px;padding:28px 26px}
+.tg-box h3{font-size:17px;font-weight:700;margin-bottom:16px}
+.tg-li{position:relative;padding-left:24px;font-size:15px;line-height:1.5;color:rgba(245,241,234,.84);margin-bottom:9px}
+.tg-li:before{content:'';position:absolute;left:0;top:8px;width:7px;height:7px;border-radius:2px;background:var(--wood)}
+.tg-li b{color:var(--paper);font-weight:600}
+.tg-li i{display:block;font-style:normal;font-size:13.5px;color:var(--steel);margin-top:2px}
+.tg-li em{font-style:normal;color:var(--amb);font-weight:700}
+
+.tg-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:22px;text-align:center}
+.tg-fact .n{font-size:40px;font-weight:800;color:var(--amb);letter-spacing:-.03em;line-height:1}
+.tg-fact .t{font-size:14px;color:rgba(245,241,234,.72);margin-top:10px;line-height:1.45}
+.tg-cta{text-align:center;padding:84px 0}
+.tg-note{font-size:13.5px;color:var(--steel);margin-top:22px;line-height:1.55}
+.tg-foot{padding:36px 0;text-align:center;font-size:13px;color:var(--steel);line-height:1.75}
+.tg-foot a{color:var(--steel);text-decoration:underline}
+@media(max-width:820px){.tg-model{grid-template-columns:1fr;gap:24px;padding:34px 0}
+.tg-model.rev>.tg-ph{order:0}.tg-btn2{margin:12px 0 0;display:block}.tg-sec{padding:56px 0}}
+</style>
+<div class="tg">
+ <div class="tg-hero"><div class="tg-w">
+  <div class="tg-mark">ТАЙГА · Каталог 2026</div>
+  <h1 class="tg-h1">Банные чаны,<br>которые мы <span>варим сами</span></h1>
+  <p class="tg-lead">Собственное производство в Чкаловске Нижегородской области. Нержавеющая сталь AISI 304, дровяная печь, отделка лиственницей. Изготовление под ключ, доставка и установка.</p>
+  <a class="tg-btn" href="https://www.instagram.com/taiga.nn/" target="_blank" rel="noopener">Написать в директ</a>
+  <a class="tg-btn2" href="tel:+79307058700">+7 930 705 87 00</a>
+ </div></div>
+
+ <div class="tg-sec"><div class="tg-w">
+  <div class="tg-eye">Модельный ряд</div>
+  <h2 class="tg-h2">Четыре изделия</h2>
+  <p class="tg-sub">Три модели чанов и гриль-стол в двух размерах. Комплектация «под ключ» одинаковая у всех, цена зависит от модели и вместимости.</p>
+  <div class="tg-model">
+   <div><div class="tg-mrole">Флагман</div><div class="tg-mt">Чан «Бурый Медведь»</div>
+    <p class="tg-mdesc">Сочетание выразительного дизайна, надёжной стальной конструкции и продуманной эргономики. Создан для комфортного парения в любое время года и становится центром зоны отдыха.</p><div class="tg-mgrid"><div class="tg-mli">Круглогодичное использование</div><div class="tg-mli">Дровяной нагрев, увеличенная печь</div><div class="tg-mli">Лестница на металлокаркасе, дымоход и весло в комплекте</div><div class="tg-mli">Самая доступная модель линейки</div></div>
+    <div class="tg-mprice">160 000 – 280 000 ₽<small>2–4, 4–6, 6–8 и 8–10 человек</small></div></div>
+  </div>
+  <div class="tg-model">
+   <div><div class="tg-mrole">Современная геометрия</div><div class="tg-mt">Чан «Алмаз»</div>
+    <p class="tg-mdesc">Выразительная геометрия и лаконичный дизайн, вдохновлённый современной архитектурой. Чёткие грани и строгие формы позволяют вписать чан в любой ландшафтный проект.</p><div class="tg-mgrid"><div class="tg-mli">Увеличенный внутренний объём чаши</div><div class="tg-mli">Эргономичная глубина погружения</div><div class="tg-mli">Устойчивая многогранная конструкция</div><div class="tg-mli">Эффектное сочетание металла и дерева</div></div>
+    <div class="tg-mprice">185 000 – 240 000 ₽<small>2–4, 4–6 и 6–8 человек</small></div></div>
+  </div>
+  <div class="tg-model">
+   <div><div class="tg-mrole">Для большой компании</div><div class="tg-mt">Чан «Тигр»</div>
+    <p class="tg-mdesc">Создан для тех, кто любит проводить время в кругу семьи и друзей. Увеличенный объём чаши даёт больше внутреннего пространства — несколько человек размещаются свободно.</p><div class="tg-mgrid"><div class="tg-mli">Больше пространства внутри чаши</div><div class="tg-mli">Каждому хватает места для полноценного отдыха</div><div class="tg-mli">Массивный силуэт премиум-класса</div><div class="tg-mli">Подходит для глэмпингов и баз отдыха</div></div>
+    <div class="tg-mprice">210 000 – 240 000 ₽<small>4–6 и 6–8 человек</small></div></div>
+  </div>
+  <div class="tg-model">
+   <div><div class="tg-mrole">Мангальная зона</div><div class="tg-mt">Гриль-стол ТАЙГА</div>
+    <p class="tg-mdesc">Премиальная мебель и полноценная зона приготовления пищи в одном. Встроенная гриль-зона позволяет готовить прямо за столом, не отвлекаясь от общения с гостями.</p><div class="tg-mgrid"><div class="tg-mli">Обеденная зона, мангал и место отдыха в одном</div><div class="tg-mli">Экономит пространство на участке</div><div class="tg-mli">Надёжная металлическая конструкция</div><div class="tg-mli">Для домов, банных комплексов и глэмпингов</div></div>
+    <div class="tg-mprice">190 000 – 210 000 ₽<small>размеры 2000 × 1200 и 2400 × 1200 мм</small></div></div>
+  </div>
+ </div></div>
+
+ <div class="tg-sec"><div class="tg-w">
+  <div class="tg-eye">Прайс-лист 2026</div>
+  <h2 class="tg-h2">Стоимость «под ключ»</h2>
+  <p class="tg-sub">Цена окончательная: в неё входит вся комплектация ниже и монтаж по Нижегородской области</p>
+  <table class="tg-table"><tr><th>Модель</th><th>Вместимость</th><th class="c">Объём чаши</th><th style="text-align:right">Стоимость</th></tr><tr class="hl"><td>Чан «Бурый Медведь»</td><td class="c">2–4 чел.</td><td class="c">1 м³</td><td class="p">160 000 ₽</td></tr><tr class=""><td></td><td class="c">4–6 чел.</td><td class="c">1,5 м³</td><td class="p">180 000 ₽</td></tr><tr class=""><td></td><td class="c">6–8 чел.</td><td class="c">1,8 м³</td><td class="p">210 000 ₽</td></tr><tr class=""><td></td><td class="c">8–10 чел.</td><td class="c">2,7 м³</td><td class="p">280 000 ₽</td></tr><tr class=""><td>Чан «Алмаз»</td><td class="c">2–4 чел.</td><td class="c">1,2 м³</td><td class="p">185 000 ₽</td></tr><tr class=""><td></td><td class="c">4–6 чел.</td><td class="c">1,8 м³</td><td class="p">210 000 ₽</td></tr><tr class=""><td></td><td class="c">6–8 чел.</td><td class="c">2,2 м³</td><td class="p">240 000 ₽</td></tr><tr class=""><td>Чан «Тигр»</td><td class="c">4–6 чел.</td><td class="c">1,85 м³</td><td class="p">210 000 ₽</td></tr><tr class=""><td></td><td class="c">6–8 чел.</td><td class="c">1,85 м³</td><td class="p">240 000 ₽</td></tr><tr class=""><td>Гриль-стол барбекю</td><td class="c">2000 × 1200 мм</td><td class="c">—</td><td class="p">190 000 ₽</td></tr><tr class=""><td></td><td class="c">2400 × 1200 мм</td><td class="c">—</td><td class="p">210 000 ₽</td></tr></table>
+  <p class="tg-sub" style="margin-top:14px">Чан «Алмаз» на 8–10 человек и «Тигр» на 2–4 и 8–10 человек делаем под заказ — стоимость считаем индивидуально.</p>
+ </div></div>
+
+ <div class="tg-sec"><div class="tg-w">
+  <div class="tg-eye">Что входит</div>
+  <h2 class="tg-h2">Комплектация и опции</h2>
+  <p class="tg-sub">Всё из левого столбца входит в цену и не продаётся отдельно</p>
+  <div class="tg-cols">
+   <div class="tg-box"><h3>Комплектация «под ключ»</h3><div class="tg-li">Чаша из нержавеющей стали <b>AISI 304</b></div><div class="tg-li">Толщина бортов чаши — <b>2 мм</b></div><div class="tg-li">Толщина дна чаши — <b>3 мм</b></div><div class="tg-li">Увеличенная дровяная печь из стали СТ-3, <b>4 мм</b></div><div class="tg-li">Дымоход Ø133 мм, длина 3 м</div><div class="tg-li">Отделка из натуральной лиственницы</div><div class="tg-li">Лестница на металлокаркасе</div><div class="tg-li">Деревянное весло для перемешивания воды</div><div class="tg-li">Комплект крепежа и готовность к эксплуатации</div><div class="tg-li">Монтаж по Нижегородской области</div></div>
+   <div class="tg-box"><h3>Дополнительные опции</h3><div class="tg-li"><b>Термо-крышка</b> — <em>25 000 ₽</em><i>Для чана до 6 человек. Держит температуру, вода остывает медленнее</i></div><div class="tg-li"><b>Термо-крышка увеличенная</b> — <em>30 000 ₽</em><i>Для чана от 6 человек</i></div><div class="tg-li"><b>Подсветка чаши</b> — <em>5 000 ₽</em><i>Атмосферное освещение в вечернее время</i></div><div class="tg-li"><b>Термометр</b> — <em>5 000 ₽</em><i>Позволяет отслеживать нагрев воды в чане</i></div><div class="tg-li"><b>Столик на опоре из нержавеющей стали</b> — <em>10 000 ₽</em><i>Удобное место для напитков и аксессуаров</i></div><div class="tg-li"><b>Сэндвич-дымоход</b> — <em>25 000 ₽</em><i>Безопаснее, труба меньше нагревается снаружи</i></div></div>
+  </div>
+ </div></div>
+
+ <div class="tg-sec"><div class="tg-w">
+  <div class="tg-eye">Почему к нам</div>
+  <h2 class="tg-h2">Цифры вместо обещаний</h2>
+  <p class="tg-sub">&nbsp;</p>
+  <div class="tg-facts">
+   <div class="tg-fact"><div class="n">42</div><div class="t">отзыва с рейтингом 5,0<br>на Авито</div></div>
+   <div class="tg-fact"><div class="n">7–14</div><div class="t">дней на изготовление<br>с момента предоплаты</div></div>
+   <div class="tg-fact"><div class="n">304</div><div class="t">марка стали AISI<br>не ржавеет годами</div></div>
+   <div class="tg-fact"><div class="n">0</div><div class="t">посредников:<br>варим в своём цеху</div></div>
+  </div>
+ </div></div>
+
+ <div class="tg-cta"><div class="tg-w">
+  <h2 class="tg-h2">Подберём модель под вашу площадку</h2>
+  <p class="tg-lead">Напишите, сколько человек будет париться, — назовём точную цену и срок. Если площадка ещё не готова, подскажем, что успеть до установки.</p>
+  <a class="tg-btn" href="https://www.instagram.com/taiga.nn/" target="_blank" rel="noopener">Написать в директ</a>
+  <a class="tg-btn2" href="https://vk.ru/taigann52" target="_blank" rel="noopener">Мы во ВКонтакте</a>
+  <div class="tg-note">Отвечаем в течение рабочего дня. Консультация и подбор — бесплатно.</div>
+ </div></div>
+
+ <div class="tg-foot"><div class="tg-w">
+  ТАЙГА · банные чаны, мангальные зоны и гриль-столы<br>
+  Россия, Нижегородская обл., г. Чкаловск, ул. Комсомольская, 61<br>
+  <a href="tel:+79307058700">+7 930 705 87 00</a> · <a href="mailto:taigann52@gmail.com">taigann52@gmail.com</a> · <a href="https://vk.ru/taigann52" target="_blank" rel="noopener">vk.ru/taigann52</a>
+ </div></div>
+</div>
