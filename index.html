@@ -38,10 +38,10 @@ font-size:15px;padding:16px 30px;border-radius:8px;text-decoration:none;margin-l
 
 .tg-mgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2px 28px;margin-top:4px}
 /* прайс */
-.tg-table{width:100%;border-collapse:collapse;font-size:15.5px;max-width:840px;margin:0 auto}
+.tg-table{color:var(--paper);width:100%;border-collapse:collapse;font-size:15.5px;max-width:840px;margin:0 auto}
 .tg-table th{text-align:left;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);
 font-weight:700;padding:0 16px 12px;border-bottom:1px solid rgba(245,241,234,.18)}
-.tg-table td{padding:14px 16px;border-bottom:1px solid rgba(245,241,234,.08);vertical-align:middle}
+.tg-table td{color:var(--paper);padding:14px 16px;border-bottom:1px solid rgba(245,241,234,.08);vertical-align:middle}
 .tg-table td.p{text-align:right;font-weight:700;color:var(--amb);white-space:nowrap}
 .tg-table td.c{color:rgba(245,241,234,.7);white-space:nowrap}
 .tg-table tr.hl td{background:rgba(224,138,30,.08)}
@@ -87,20 +87,30 @@ font-weight:700;padding:0 16px 12px;border-bottom:1px solid rgba(245,241,234,.18
 .tg-feat .tg-mt{font-size:clamp(26px,3.4vw,36px)}
 .tg-badge{display:inline-block;background:var(--amb);color:#1a1200;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin-bottom:14px}
 .tg-badge--q{background:none;color:var(--amb);padding:0;border-radius:0;font-weight:700;letter-spacing:.14em}
-.tg-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
-.tg-chips span{font-size:13.5px;padding:6px 12px;border-radius:999px;border:1px solid rgba(245,241,234,.22);color:rgba(245,241,234,.88)}
+.tg-sizes-lbl{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--steel);margin-bottom:10px}
+.tg-sizes{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
+.tg-size{font:inherit;font-size:14.5px;font-weight:600;min-height:44px;padding:8px 16px;border-radius:12px;border:1px solid rgba(245,241,234,.25);background:rgba(245,241,234,.03);color:var(--paper);cursor:pointer;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.15;transition:background .18s,border-color .18s,color .18s}
+.tg-size i{font-style:normal;font-size:11px;font-weight:500;color:var(--steel);margin-top:2px}
+.tg-size.is-order{border-style:dashed}
+.tg-size:hover{border-color:var(--amb)}
+.tg-size[aria-pressed="true"]{background:var(--amb);border-color:var(--amb);color:#1a1200}
+.tg-size[aria-pressed="true"] i{color:rgba(26,18,0,.7)}
+.tg-size:focus-visible{outline:2px solid var(--amb);outline-offset:2px}
+.tg-pv{display:inline-block;transition:opacity .15s}
+.tg-pv.sw{opacity:.25}
+.tg-fprice.is-order .tg-pv{font-size:.8em}
 .tg-fprice{font-size:clamp(30px,4vw,40px);font-weight:800;letter-spacing:-.02em;color:var(--amb);margin:20px 0 22px;line-height:1.1}
 .tg-fprice small{display:block;font-size:13.5px;font-weight:500;letter-spacing:0;color:var(--steel);margin-top:6px}
 @media(max-width:820px){.tg-feat{grid-template-columns:1fr;gap:22px;padding:14px 14px 24px}.tg-feat.rev .tg-gal{order:0}.tg-fbody{padding:0 6px}.tg-feat .tg-btn{display:block;text-align:center}}
 @media(max-width:560px){.tg-table{font-size:13.5px}.tg-table th{padding:0 6px 10px;letter-spacing:.06em;font-size:10px}.tg-table td{padding:11px 6px}.tg-table td.c{white-space:normal}.tg-table td:first-child{min-width:84px}}
-@media(prefers-reduced-motion:reduce){.tg-gal-main img,.tg-th,.tg-arr{transition:none}}
+@media(prefers-reduced-motion:reduce){.tg-gal-main img,.tg-th,.tg-arr,.tg-size,.tg-pv{transition:none}}
 </style>
 <div class="tg">
  <div class="tg-hero"><div class="tg-w">
   <div class="tg-mark">ТАЙГА · Каталог 2026</div>
   <h1 class="tg-h1">Банные чаны,<br>которые мы <span>варим сами</span></h1>
   <p class="tg-lead">Собственное производство в Чкаловске Нижегородской области. Нержавеющая сталь AISI 304, дровяная печь, отделка лиственницей. Изготовление под ключ, доставка и установка.</p>
-  <a class="tg-btn" href="https://www.instagram.com/taiga.nn/" target="_blank" rel="noopener">Написать в директ</a>
+  <a class="tg-btn" href="https://t.me/TaigaNNmanager" target="_blank" rel="noopener">Написать в телеграм</a>
   <a class="tg-btn2" href="tel:+79307058700">+7 930 705 87 00</a>
  </div></div>
 
@@ -108,7 +118,7 @@ font-weight:700;padding:0 16px 12px;border-bottom:1px solid rgba(245,241,234,.18
   <div class="tg-eye">Модельный ряд</div>
   <h2 class="tg-h2">Пять изделий</h2>
   <p class="tg-sub">Четыре модели чанов и гриль-стол в двух размерах. У Медведя, Алмаза и Тигра комплектация «под ключ» одинаковая, у Дачного своя. Листайте фото в каждой карточке. Цена зависит от модели и вместимости.</p>
-  <article class="tg-feat" aria-label="Чан «Дачный»">
+  <article data-key="dachny" class="tg-feat" aria-label="Чан «Дачный»">
    <div class="tg-gal">
     <figure class="tg-gal-main"><img src="https://taigann.github.io/Katalog2026/img/dachny-1.webp" alt="Чан «Дачный» целиком" width="960" height="960"><figcaption>Чан «Дачный» целиком</figcaption>
      <button type="button" class="tg-arr prev" aria-label="Предыдущее фото">&#8249;</button><button type="button" class="tg-arr next" aria-label="Следующее фото">&#8250;</button></figure>
@@ -118,13 +128,13 @@ font-weight:700;padding:0 16px 12px;border-bottom:1px solid rgba(245,241,234,.18
     <div class="tg-badge">Новинка</div>
     <h3 class="tg-mt">Чан «Дачный»</h3>
     <p class="tg-mdesc">Небольшой чан для дачи и компактного участка. Чаша из нержавеющей стали AISI 304 толщиной 2 мм, печь со стенкой 4 мм, отделка из сибирской лиственницы.</p>
-    <div class="tg-chips"><span>до 2 человек</span><span>AISI 304, 2 мм</span><span>печь 4 мм</span><span>лиственница</span></div>
+    <div class="tg-sizes-lbl" id="sz-dachny">Вместимость</div><div class="tg-sizes" role="group" aria-labelledby="sz-dachny"><button type="button" class="tg-size" aria-pressed="true" data-full="до 2 человек" data-vol="" data-price="145000">до 2 чел.</button></div>
     <div class="tg-flist"><div class="tg-mli">Колосники, зольник и топочная дверца</div><div class="tg-mli">Два боковых столика</div><div class="tg-mli">Дымоход с абажуром</div><div class="tg-mli">Монтаж по Нижегородской области в цене</div></div>
-    <div class="tg-fprice">145 000 ₽<small>Самая доступная модель линейки</small></div>
-    <a class="tg-btn" href="https://www.instagram.com/taiga.nn/" target="_blank" rel="noopener">Узнать срок в директ</a>
+    <div class="tg-fprice" aria-live="polite"><span class="tg-pv">145 000 ₽</span><small class="tg-pd">До 2 человек · самая доступная модель линейки</small></div>
+    <a class="tg-btn tg-buy" href="https://t.me/TaigaNNmanager?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20%D1%87%D0%B0%D0%BD%20%C2%AB%D0%94%D0%B0%D1%87%D0%BD%D1%8B%D0%B9%C2%BB%20%D0%B4%D0%BE%202%20%D1%87%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA%20%D0%B7%D0%B0%20145%20000%20%E2%82%BD.%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%A2%D0%90%D0%99%D0%93%D0%90." target="_blank" rel="noopener" data-name="чан «Дачный»">Купить</a>
    </div>
   </article>
-  <article class="tg-feat rev" aria-label="Чан «Бурый Медведь»">
+  <article data-key="medved" class="tg-feat rev" aria-label="Чан «Бурый Медведь»">
    <div class="tg-gal">
     <figure class="tg-gal-main"><img src="https://taigann.github.io/Katalog2026/img/medved-1.webp" alt="Бурый Медведь с лестницей и веслом" width="960" height="960" loading="lazy"><figcaption>Бурый Медведь с лестницей и веслом</figcaption>
      <button type="button" class="tg-arr prev" aria-label="Предыдущее фото">&#8249;</button><button type="button" class="tg-arr next" aria-label="Следующее фото">&#8250;</button></figure>
@@ -134,13 +144,13 @@ font-weight:700;padding:0 16px 12px;border-bottom:1px solid rgba(245,241,234,.18
     <div class="tg-badge tg-badge--q">Флагман</div>
     <h3 class="tg-mt">Чан «Бурый Медведь»</h3>
     <p class="tg-mdesc">Сочетание выразительного дизайна, надёжной стальной конструкции и продуманной эргономики. Создан для комфортного парения в любое время года и становится центром зоны отдыха.</p>
-    <div class="tg-chips"><span>2–4 чел.</span><span>4–6 чел.</span><span>6–8 чел.</span><span>8–10 чел.</span></div>
+    <div class="tg-sizes-lbl" id="sz-medved">Вместимость</div><div class="tg-sizes" role="group" aria-labelledby="sz-medved"><button type="button" class="tg-size" aria-pressed="true" data-full="на 2–4 человека" data-vol="1 м³" data-price="160000">2–4 чел.</button><button type="button" class="tg-size" aria-pressed="false" data-full="на 4–6 человек" data-vol="1,5 м³" data-price="180000">4–6 чел.</button><button type="button" class="tg-size" aria-pressed="false" data-full="на 6–8 человек" data-vol="1,8 м³" data-price="210000">6–8 чел.</button><button type="button" class="tg-size" aria-pressed="false" data-full="на 8–10 человек" data-vol="2,7 м³" data-price="280000">8–10 чел.</button></div>
     <div class="tg-flist"><div class="tg-mli">Круглогодичное использование</div><div class="tg-mli">Дровяной нагрев, увеличенная печь</div><div class="tg-mli">Лестница на металлокаркасе, дымоход и весло в комплекте</div><div class="tg-mli">Монтаж по Нижегородской области в цене</div></div>
-    <div class="tg-fprice">от 160 000 ₽<small>до 280 000 ₽ за чан на 8–10 человек</small></div>
-    <a class="tg-btn" href="https://www.instagram.com/taiga.nn/" target="_blank" rel="noopener">Подобрать размер в директ</a>
+    <div class="tg-fprice" aria-live="polite"><span class="tg-pv">160 000 ₽</span><small class="tg-pd">На 2–4 человека · чаша 1 м³</small></div>
+    <a class="tg-btn tg-buy" href="https://t.me/TaigaNNmanager?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20%D1%87%D0%B0%D0%BD%20%C2%AB%D0%91%D1%83%D1%80%D1%8B%D0%B9%20%D0%9C%D0%B5%D0%B4%D0%B2%D0%B5%D0%B4%D1%8C%C2%BB%20%D0%BD%D0%B0%202%E2%80%934%20%D1%87%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA%D0%B0%20%D0%B7%D0%B0%20160%20000%20%E2%82%BD.%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%A2%D0%90%D0%99%D0%93%D0%90." target="_blank" rel="noopener" data-name="чан «Бурый Медведь»">Купить</a>
    </div>
   </article>
-  <article class="tg-feat" aria-label="Чан «Алмаз»">
+  <article data-key="almaz" class="tg-feat" aria-label="Чан «Алмаз»">
    <div class="tg-gal">
     <figure class="tg-gal-main"><img src="https://taigann.github.io/Katalog2026/img/almaz-1.webp" alt="Алмаз: восьмигранная чаша с сиденьями" width="960" height="960" loading="lazy"><figcaption>Алмаз: восьмигранная чаша с сиденьями</figcaption>
      <button type="button" class="tg-arr prev" aria-label="Предыдущее фото">&#8249;</button><button type="button" class="tg-arr next" aria-label="Следующее фото">&#8250;</button></figure>
@@ -150,13 +160,13 @@ font-weight:700;padding:0 16px 12px;border-bottom:1px solid rgba(245,241,234,.18
     <div class="tg-badge tg-badge--q">Современная геометрия</div>
     <h3 class="tg-mt">Чан «Алмаз»</h3>
     <p class="tg-mdesc">Выразительная геометрия и лаконичный дизайн, вдохновлённый современной архитектурой. Чёткие грани и строгие формы позволяют вписать чан в любой ландшафтный проект.</p>
-    <div class="tg-chips"><span>2–4 чел.</span><span>4–6 чел.</span><span>6–8 чел.</span></div>
+    <div class="tg-sizes-lbl" id="sz-almaz">Вместимость</div><div class="tg-sizes" role="group" aria-labelledby="sz-almaz"><button type="button" class="tg-size" aria-pressed="true" data-full="на 2–4 человека" data-vol="1,2 м³" data-price="185000">2–4 чел.</button><button type="button" class="tg-size" aria-pressed="false" data-full="на 4–6 человек" data-vol="1,8 м³" data-price="210000">4–6 чел.</button><button type="button" class="tg-size" aria-pressed="false" data-full="на 6–8 человек" data-vol="2,2 м³" data-price="240000">6–8 чел.</button><button type="button" class="tg-size is-order" aria-pressed="false" data-full="на 8–10 человек" data-vol="" data-price="">8–10 чел.<i>под заказ</i></button></div>
     <div class="tg-flist"><div class="tg-mli">Увеличенный внутренний объём чаши</div><div class="tg-mli">Эргономичная глубина погружения</div><div class="tg-mli">Устойчивая многогранная конструкция</div><div class="tg-mli">Эффектное сочетание металла и дерева</div></div>
-    <div class="tg-fprice">от 185 000 ₽<small>до 240 000 ₽ за чан на 6–8 человек</small></div>
-    <a class="tg-btn" href="https://www.instagram.com/taiga.nn/" target="_blank" rel="noopener">Подобрать размер в директ</a>
+    <div class="tg-fprice" aria-live="polite"><span class="tg-pv">185 000 ₽</span><small class="tg-pd">На 2–4 человека · чаша 1,2 м³</small></div>
+    <a class="tg-btn tg-buy" href="https://t.me/TaigaNNmanager?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20%D1%87%D0%B0%D0%BD%20%C2%AB%D0%90%D0%BB%D0%BC%D0%B0%D0%B7%C2%BB%20%D0%BD%D0%B0%202%E2%80%934%20%D1%87%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA%D0%B0%20%D0%B7%D0%B0%20185%20000%20%E2%82%BD.%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%A2%D0%90%D0%99%D0%93%D0%90." target="_blank" rel="noopener" data-name="чан «Алмаз»">Купить</a>
    </div>
   </article>
-  <article class="tg-feat rev" aria-label="Чан «Тигр»">
+  <article data-key="tigr" class="tg-feat rev" aria-label="Чан «Тигр»">
    <div class="tg-gal">
     <figure class="tg-gal-main"><img src="https://taigann.github.io/Katalog2026/img/tigr-1.webp" alt="Тигр целиком" width="960" height="960" loading="lazy"><figcaption>Тигр целиком</figcaption>
      <button type="button" class="tg-arr prev" aria-label="Предыдущее фото">&#8249;</button><button type="button" class="tg-arr next" aria-label="Следующее фото">&#8250;</button></figure>
@@ -166,13 +176,13 @@ font-weight:700;padding:0 16px 12px;border-bottom:1px solid rgba(245,241,234,.18
     <div class="tg-badge tg-badge--q">Для большой компании</div>
     <h3 class="tg-mt">Чан «Тигр»</h3>
     <p class="tg-mdesc">Создан для тех, кто любит проводить время в кругу семьи и друзей. Увеличенный объём чаши даёт больше внутреннего пространства, несколько человек размещаются свободно.</p>
-    <div class="tg-chips"><span>4–6 чел.</span><span>6–8 чел.</span></div>
+    <div class="tg-sizes-lbl" id="sz-tigr">Вместимость</div><div class="tg-sizes" role="group" aria-labelledby="sz-tigr"><button type="button" class="tg-size is-order" aria-pressed="false" data-full="на 2–4 человека" data-vol="" data-price="">2–4 чел.<i>под заказ</i></button><button type="button" class="tg-size" aria-pressed="true" data-full="на 4–6 человек" data-vol="" data-price="210000">4–6 чел.</button><button type="button" class="tg-size" aria-pressed="false" data-full="на 6–8 человек" data-vol="" data-price="240000">6–8 чел.</button><button type="button" class="tg-size is-order" aria-pressed="false" data-full="на 8–10 человек" data-vol="" data-price="">8–10 чел.<i>под заказ</i></button></div>
     <div class="tg-flist"><div class="tg-mli">Больше пространства внутри чаши</div><div class="tg-mli">Каждому хватает места для полноценного отдыха</div><div class="tg-mli">Массивный силуэт премиум-класса</div><div class="tg-mli">Подходит для глэмпингов и баз отдыха</div></div>
-    <div class="tg-fprice">от 210 000 ₽<small>до 240 000 ₽ за чан на 6–8 человек</small></div>
-    <a class="tg-btn" href="https://www.instagram.com/taiga.nn/" target="_blank" rel="noopener">Подобрать размер в директ</a>
+    <div class="tg-fprice" aria-live="polite"><span class="tg-pv">210 000 ₽</span><small class="tg-pd">На 4–6 человек</small></div>
+    <a class="tg-btn tg-buy" href="https://t.me/TaigaNNmanager?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20%D1%87%D0%B0%D0%BD%20%C2%AB%D0%A2%D0%B8%D0%B3%D1%80%C2%BB%20%D0%BD%D0%B0%204%E2%80%936%20%D1%87%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA%20%D0%B7%D0%B0%20210%20000%20%E2%82%BD.%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%A2%D0%90%D0%99%D0%93%D0%90." target="_blank" rel="noopener" data-name="чан «Тигр»">Купить</a>
    </div>
   </article>
-  <article class="tg-feat" aria-label="Гриль-стол ТАЙГА">
+  <article data-key="grill" class="tg-feat" aria-label="Гриль-стол ТАЙГА">
    <div class="tg-gal">
     <figure class="tg-gal-main"><img src="https://taigann.github.io/Katalog2026/img/grill-1.webp" alt="Гриль-стол на участке" width="960" height="960" loading="lazy"><figcaption>Гриль-стол на участке</figcaption>
      <button type="button" class="tg-arr prev" aria-label="Предыдущее фото">&#8249;</button><button type="button" class="tg-arr next" aria-label="Следующее фото">&#8250;</button></figure>
@@ -182,10 +192,10 @@ font-weight:700;padding:0 16px 12px;border-bottom:1px solid rgba(245,241,234,.18
     <div class="tg-badge tg-badge--q">Мангальная зона</div>
     <h3 class="tg-mt">Гриль-стол ТАЙГА</h3>
     <p class="tg-mdesc">Премиальная мебель и полноценная зона приготовления пищи в одном. Встроенная гриль-зона позволяет готовить прямо за столом, не отвлекаясь от общения с гостями.</p>
-    <div class="tg-chips"><span>2000 × 1200 мм</span><span>2400 × 1200 мм</span></div>
+    <div class="tg-sizes-lbl" id="sz-grill">Размер столешницы</div><div class="tg-sizes" role="group" aria-labelledby="sz-grill"><button type="button" class="tg-size" aria-pressed="true" data-full="со столешницей 2000 × 1200 мм" data-vol="" data-price="190000">2000 × 1200 мм</button><button type="button" class="tg-size" aria-pressed="false" data-full="со столешницей 2400 × 1200 мм" data-vol="" data-price="210000">2400 × 1200 мм</button></div>
     <div class="tg-flist"><div class="tg-mli">Обеденная зона, мангал и место отдыха в одном</div><div class="tg-mli">Экономит пространство на участке</div><div class="tg-mli">Надёжная металлическая конструкция</div><div class="tg-mli">Для домов, банных комплексов и глэмпингов</div></div>
-    <div class="tg-fprice">от 190 000 ₽<small>210 000 ₽ за стол 2400 × 1200 мм</small></div>
-    <a class="tg-btn" href="https://www.instagram.com/taiga.nn/" target="_blank" rel="noopener">Узнать срок в директ</a>
+    <div class="tg-fprice" aria-live="polite"><span class="tg-pv">190 000 ₽</span><small class="tg-pd">Со столешницей 2000 × 1200 мм</small></div>
+    <a class="tg-btn tg-buy" href="https://t.me/TaigaNNmanager?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BA%D1%83%D0%BF%D0%B8%D1%82%D1%8C%20%D0%B3%D1%80%D0%B8%D0%BB%D1%8C-%D1%81%D1%82%D0%BE%D0%BB%20%D0%A2%D0%90%D0%99%D0%93%D0%90%20%D1%81%D0%BE%20%D1%81%D1%82%D0%BE%D0%BB%D0%B5%D1%88%D0%BD%D0%B8%D1%86%D0%B5%D0%B9%202000%20%C3%97%201200%20%D0%BC%D0%BC%20%D0%B7%D0%B0%20190%20000%20%E2%82%BD.%20%D0%9F%D0%B8%D1%88%D1%83%20%D1%81%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0%20%D0%A2%D0%90%D0%99%D0%93%D0%90." target="_blank" rel="noopener" data-name="гриль-стол ТАЙГА">Купить</a>
    </div>
   </article>
  </div></div>
@@ -213,7 +223,7 @@ font-weight:700;padding:0 16px 12px;border-bottom:1px solid rgba(245,241,234,.18
   <h2 class="tg-h2">Цифры вместо обещаний</h2>
   <p class="tg-sub">&nbsp;</p>
   <div class="tg-facts">
-   <div class="tg-fact"><div class="n">42</div><div class="t">отзыва с рейтингом 5,0<br>на Авито</div></div>
+   <div class="tg-fact"><div class="n">45</div><div class="t">отзывов с рейтингом 5,0<br>на Авито</div></div>
    <div class="tg-fact"><div class="n">7–14</div><div class="t">дней на изготовление<br>с момента предоплаты</div></div>
    <div class="tg-fact"><div class="n">304</div><div class="t">марка стали AISI<br>не ржавеет годами</div></div>
    <div class="tg-fact"><div class="n">0</div><div class="t">посредников:<br>варим в своём цеху</div></div>
@@ -245,4 +255,13 @@ r.querySelector('.tg-arr.next').addEventListener('click',function(){go(cur+1)});
 var x0=null,f=m.parentNode;f.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
 f.addEventListener('touchend',function(e){if(x0===null)return;var d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40)go(cur+(d<0?1:-1));x0=null});
 });})();
+(function(){var TG='https://t.me/TaigaNNmanager';function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,' ')+' ₽'}
+[].forEach.call(document.querySelectorAll('.tg-feat'),function(r){var bs=[].slice.call(r.querySelectorAll('.tg-size'));if(!bs.length)return;
+var pv=r.querySelector('.tg-pv'),pd=r.querySelector('.tg-pd'),fp=r.querySelector('.tg-fprice'),buy=r.querySelector('.tg-buy'),name=buy.getAttribute('data-name'),extra=r.getAttribute('data-key')==='dachny'?'самая доступная модель линейки':'';
+function pick(b){bs.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});var full=b.getAttribute('data-full'),vol=b.getAttribute('data-vol'),p=b.getAttribute('data-price');
+var parts=[full];if(vol)parts.push('чаша '+vol);if(!p)parts.push('стоимость считаем индивидуально');else if(extra)parts.push(extra);var d=parts.join(' · ');
+pv.classList.add('sw');setTimeout(function(){pv.textContent=p?fmt(p):'Под заказ';pd.textContent=d.charAt(0).toUpperCase()+d.slice(1);fp.classList.toggle('is-order',!p);pv.classList.remove('sw')},120);
+var m=p?'Здравствуйте! Хочу купить '+name+' '+full+' за '+fmt(p)+'. Пишу с сайта ТАЙГА.':'Здравствуйте! Хочу заказать '+name+' '+full+'. Посчитайте, пожалуйста, стоимость.';
+buy.href=TG+'?text='+encodeURIComponent(m);}
+bs.forEach(function(b){b.addEventListener('click',function(){pick(b)})});});})();
 </script>
