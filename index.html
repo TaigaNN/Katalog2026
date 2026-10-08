@@ -67,27 +67,32 @@ font-weight:700;padding:0 16px 12px;border-bottom:1px solid rgba(245,241,234,.18
 @media(max-width:820px){.tg-model{grid-template-columns:1fr;gap:24px;padding:34px 0}
 .tg-model.rev>.tg-ph{order:0}.tg-btn2{margin:12px 0 0;display:block}.tg-sec{padding:56px 0}}
 
-/* дачный: карточка с галереей */
-.tg-feat{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:center;padding:32px;margin:0 0 26px;border-radius:20px;background:linear-gradient(155deg,rgba(31,59,44,.75),rgba(19,32,24,.25));border:1px solid rgba(224,138,30,.3)}
-.tg-gal-main{position:relative;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#0d1611}
+/* карточки моделей с галереей */
+.tg-feat{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:44px;align-items:center;padding:32px;margin:0 0 24px;border-radius:20px;background:linear-gradient(155deg,rgba(31,59,44,.6),rgba(19,32,24,.15));border:1px solid rgba(245,241,234,.1)}
+.tg-feat:first-of-type{border-color:rgba(224,138,30,.35);background:linear-gradient(155deg,rgba(31,59,44,.8),rgba(19,32,24,.25))}
+.tg-feat.rev .tg-gal{order:2}
+.tg-gal-main{position:relative;aspect-ratio:1/1;border-radius:14px;overflow:hidden;background:#0d1611;margin:0}
 .tg-gal-main img{width:100%;height:100%;object-fit:cover;display:block;transition:opacity .22s ease}
 .tg-gal-main img.ld{opacity:.35}
-.tg-gal-main figcaption{position:absolute;left:0;right:0;bottom:0;padding:40px 18px 14px;font-size:14px;color:var(--paper);background:linear-gradient(to top,rgba(10,16,12,.85),rgba(10,16,12,0))}
-.tg-arr{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;cursor:pointer;background:rgba(19,32,24,.72);color:var(--paper);font-size:28px;line-height:44px;padding:0;transition:background .2s}
+.tg-gal-main figcaption{position:absolute;left:0;right:0;bottom:0;padding:44px 18px 14px;font-size:14px;color:var(--paper);background:linear-gradient(to top,rgba(10,16,12,.85),rgba(10,16,12,0))}
+.tg-arr{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;cursor:pointer;background:rgba(19,32,24,.72);color:var(--paper);font-size:28px;line-height:44px;padding:0;transition:background .2s,color .2s}
 .tg-arr:hover{background:var(--amb);color:#1a1200}
 .tg-arr.prev{left:12px}.tg-arr.next{right:12px}
 .tg-thumbs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin-top:10px}
-.tg-th{display:block;aspect-ratio:4/3;padding:0;border:2px solid transparent;border-radius:8px;overflow:hidden;cursor:pointer;background:#0d1611;opacity:.6;transition:opacity .2s,border-color .2s}
+.tg-th{display:block;aspect-ratio:1/1;padding:0;border:2px solid transparent;border-radius:8px;overflow:hidden;cursor:pointer;background:#0d1611;opacity:.6;transition:opacity .2s,border-color .2s}
 .tg-th img{width:100%;height:100%;object-fit:cover;display:block}
 .tg-th:hover{opacity:1}
 .tg-th[aria-pressed="true"]{opacity:1;border-color:var(--amb)}
-.tg-th:focus-visible,.tg-arr:focus-visible{outline:2px solid var(--amb);outline-offset:2px}
+.tg-th:focus-visible,.tg-arr:focus-visible,.tg-feat .tg-btn:focus-visible{outline:2px solid var(--amb);outline-offset:2px}
+.tg-feat .tg-mt{font-size:clamp(26px,3.4vw,36px)}
 .tg-badge{display:inline-block;background:var(--amb);color:#1a1200;font-size:12px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin-bottom:14px}
+.tg-badge--q{background:none;color:var(--amb);padding:0;border-radius:0;font-weight:700;letter-spacing:.14em}
 .tg-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
 .tg-chips span{font-size:13.5px;padding:6px 12px;border-radius:999px;border:1px solid rgba(245,241,234,.22);color:rgba(245,241,234,.88)}
 .tg-fprice{font-size:clamp(30px,4vw,40px);font-weight:800;letter-spacing:-.02em;color:var(--amb);margin:20px 0 22px;line-height:1.1}
 .tg-fprice small{display:block;font-size:13.5px;font-weight:500;letter-spacing:0;color:var(--steel);margin-top:6px}
-@media(max-width:820px){.tg-feat{grid-template-columns:1fr;gap:22px;padding:14px 14px 24px}.tg-fbody{padding:0 6px}.tg-fbody .tg-btn{display:block;text-align:center}}
+@media(max-width:820px){.tg-feat{grid-template-columns:1fr;gap:22px;padding:14px 14px 24px}.tg-feat.rev .tg-gal{order:0}.tg-fbody{padding:0 6px}.tg-feat .tg-btn{display:block;text-align:center}}
+@media(max-width:560px){.tg-table{font-size:13.5px}.tg-table th{padding:0 6px 10px;letter-spacing:.06em;font-size:10px}.tg-table td{padding:11px 6px}.tg-table td.c{white-space:normal}.tg-table td:first-child{min-width:84px}}
 @media(prefers-reduced-motion:reduce){.tg-gal-main img,.tg-th,.tg-arr{transition:none}}
 </style>
 <div class="tg">
@@ -102,43 +107,87 @@ font-weight:700;padding:0 16px 12px;border-bottom:1px solid rgba(245,241,234,.18
  <div class="tg-sec"><div class="tg-w">
   <div class="tg-eye">Модельный ряд</div>
   <h2 class="tg-h2">Пять изделий</h2>
-  <p class="tg-sub">Четыре модели чанов и гриль-стол в двух размерах. У Медведя, Алмаза и Тигра комплектация «под ключ» одинаковая, у Дачного своя, она в карточке ниже. Цена зависит от модели и вместимости.</p>
-  <div class="tg-feat" id="tg-dach">
+  <p class="tg-sub">Четыре модели чанов и гриль-стол в двух размерах. У Медведя, Алмаза и Тигра комплектация «под ключ» одинаковая, у Дачного своя. Листайте фото в каждой карточке. Цена зависит от модели и вместимости.</p>
+  <article class="tg-feat" aria-label="Чан «Дачный»">
    <div class="tg-gal">
-    <figure class="tg-gal-main"><img src="https://taigann.github.io/Katalog2026/img/dachny-1.webp" alt="Чан «Дачный» целиком" width="1280" height="960"><figcaption>Чан «Дачный» целиком</figcaption>
+    <figure class="tg-gal-main"><img src="https://taigann.github.io/Katalog2026/img/dachny-1.webp" alt="Чан «Дачный» целиком" width="960" height="960"><figcaption>Чан «Дачный» целиком</figcaption>
      <button type="button" class="tg-arr prev" aria-label="Предыдущее фото">&#8249;</button><button type="button" class="tg-arr next" aria-label="Следующее фото">&#8250;</button></figure>
-    <div class="tg-thumbs"><button type="button" class="tg-th" aria-pressed="true" aria-label="Фото 1: Чан «Дачный» целиком" data-src="https://taigann.github.io/Katalog2026/img/dachny-1.webp" data-alt="Чан «Дачный» целиком"><img src="https://taigann.github.io/Katalog2026/img/dachny-1-t.webp" alt="" width="320" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 2: Вид со стороны топки" data-src="https://taigann.github.io/Katalog2026/img/dachny-2.webp" data-alt="Вид со стороны топки"><img src="https://taigann.github.io/Katalog2026/img/dachny-2-t.webp" alt="" width="320" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 3: Чаша из нержавейки AISI 304, борт из лиственницы" data-src="https://taigann.github.io/Katalog2026/img/dachny-3.webp" data-alt="Чаша из нержавейки AISI 304, борт из лиственницы"><img src="https://taigann.github.io/Katalog2026/img/dachny-3-t.webp" alt="" width="320" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 4: Два боковых столика у дымохода" data-src="https://taigann.github.io/Katalog2026/img/dachny-4.webp" data-alt="Два боковых столика у дымохода"><img src="https://taigann.github.io/Katalog2026/img/dachny-4-t.webp" alt="" width="320" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 5: Топочная дверца и зольник" data-src="https://taigann.github.io/Katalog2026/img/dachny-5.webp" data-alt="Топочная дверца и зольник"><img src="https://taigann.github.io/Katalog2026/img/dachny-5-t.webp" alt="" width="320" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 6: Дымоход с абажуром" data-src="https://taigann.github.io/Katalog2026/img/dachny-6.webp" data-alt="Дымоход с абажуром"><img src="https://taigann.github.io/Katalog2026/img/dachny-6-t.webp" alt="" width="320" height="240" loading="lazy"></button></div>
+    <div class="tg-thumbs" style="--n:6"><button type="button" class="tg-th" aria-pressed="true" aria-label="Фото 1: Чан «Дачный» целиком" data-src="https://taigann.github.io/Katalog2026/img/dachny-1.webp" data-alt="Чан «Дачный» целиком"><img src="https://taigann.github.io/Katalog2026/img/dachny-1-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 2: Вид со стороны топки" data-src="https://taigann.github.io/Katalog2026/img/dachny-2.webp" data-alt="Вид со стороны топки"><img src="https://taigann.github.io/Katalog2026/img/dachny-2-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 3: Чаша из нержавейки AISI 304, борт из лиственницы" data-src="https://taigann.github.io/Katalog2026/img/dachny-3.webp" data-alt="Чаша из нержавейки AISI 304, борт из лиственницы"><img src="https://taigann.github.io/Katalog2026/img/dachny-3-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 4: Два боковых столика у дымохода" data-src="https://taigann.github.io/Katalog2026/img/dachny-4.webp" data-alt="Два боковых столика у дымохода"><img src="https://taigann.github.io/Katalog2026/img/dachny-4-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 5: Топочная дверца и зольник" data-src="https://taigann.github.io/Katalog2026/img/dachny-5.webp" data-alt="Топочная дверца и зольник"><img src="https://taigann.github.io/Katalog2026/img/dachny-5-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 6: Дымоход с абажуром" data-src="https://taigann.github.io/Katalog2026/img/dachny-6.webp" data-alt="Дымоход с абажуром"><img src="https://taigann.github.io/Katalog2026/img/dachny-6-t.webp" alt="" width="240" height="240" loading="lazy"></button></div>
    </div>
    <div class="tg-fbody">
     <div class="tg-badge">Новинка</div>
-    <div class="tg-mt">Чан «Дачный»</div>
+    <h3 class="tg-mt">Чан «Дачный»</h3>
     <p class="tg-mdesc">Небольшой чан для дачи и компактного участка. Чаша из нержавеющей стали AISI 304 толщиной 2 мм, печь со стенкой 4 мм, отделка из сибирской лиственницы.</p>
     <div class="tg-chips"><span>до 2 человек</span><span>AISI 304, 2 мм</span><span>печь 4 мм</span><span>лиственница</span></div>
     <div class="tg-flist"><div class="tg-mli">Колосники, зольник и топочная дверца</div><div class="tg-mli">Два боковых столика</div><div class="tg-mli">Дымоход с абажуром</div><div class="tg-mli">Монтаж по Нижегородской области в цене</div></div>
     <div class="tg-fprice">145 000 ₽<small>Самая доступная модель линейки</small></div>
     <a class="tg-btn" href="https://www.instagram.com/taiga.nn/" target="_blank" rel="noopener">Узнать срок в директ</a>
    </div>
-  </div>
-  <div class="tg-model">
-   <div><div class="tg-mrole">Флагман</div><div class="tg-mt">Чан «Бурый Медведь»</div>
-    <p class="tg-mdesc">Сочетание выразительного дизайна, надёжной стальной конструкции и продуманной эргономики. Создан для комфортного парения в любое время года и становится центром зоны отдыха.</p><div class="tg-mgrid"><div class="tg-mli">Круглогодичное использование</div><div class="tg-mli">Дровяной нагрев, увеличенная печь</div><div class="tg-mli">Лестница на металлокаркасе, дымоход и весло в комплекте</div><div class="tg-mli">Четыре размера, от 2–4 до 8–10 человек</div></div>
-    <div class="tg-mprice">160 000 – 280 000 ₽<small>2–4, 4–6, 6–8 и 8–10 человек</small></div></div>
-  </div>
-  <div class="tg-model">
-   <div><div class="tg-mrole">Современная геометрия</div><div class="tg-mt">Чан «Алмаз»</div>
-    <p class="tg-mdesc">Выразительная геометрия и лаконичный дизайн, вдохновлённый современной архитектурой. Чёткие грани и строгие формы позволяют вписать чан в любой ландшафтный проект.</p><div class="tg-mgrid"><div class="tg-mli">Увеличенный внутренний объём чаши</div><div class="tg-mli">Эргономичная глубина погружения</div><div class="tg-mli">Устойчивая многогранная конструкция</div><div class="tg-mli">Эффектное сочетание металла и дерева</div></div>
-    <div class="tg-mprice">185 000 – 240 000 ₽<small>2–4, 4–6 и 6–8 человек</small></div></div>
-  </div>
-  <div class="tg-model">
-   <div><div class="tg-mrole">Для большой компании</div><div class="tg-mt">Чан «Тигр»</div>
-    <p class="tg-mdesc">Создан для тех, кто любит проводить время в кругу семьи и друзей. Увеличенный объём чаши даёт больше внутреннего пространства — несколько человек размещаются свободно.</p><div class="tg-mgrid"><div class="tg-mli">Больше пространства внутри чаши</div><div class="tg-mli">Каждому хватает места для полноценного отдыха</div><div class="tg-mli">Массивный силуэт премиум-класса</div><div class="tg-mli">Подходит для глэмпингов и баз отдыха</div></div>
-    <div class="tg-mprice">210 000 – 240 000 ₽<small>4–6 и 6–8 человек</small></div></div>
-  </div>
-  <div class="tg-model">
-   <div><div class="tg-mrole">Мангальная зона</div><div class="tg-mt">Гриль-стол ТАЙГА</div>
-    <p class="tg-mdesc">Премиальная мебель и полноценная зона приготовления пищи в одном. Встроенная гриль-зона позволяет готовить прямо за столом, не отвлекаясь от общения с гостями.</p><div class="tg-mgrid"><div class="tg-mli">Обеденная зона, мангал и место отдыха в одном</div><div class="tg-mli">Экономит пространство на участке</div><div class="tg-mli">Надёжная металлическая конструкция</div><div class="tg-mli">Для домов, банных комплексов и глэмпингов</div></div>
-    <div class="tg-mprice">190 000 – 210 000 ₽<small>размеры 2000 × 1200 и 2400 × 1200 мм</small></div></div>
-  </div>
+  </article>
+  <article class="tg-feat rev" aria-label="Чан «Бурый Медведь»">
+   <div class="tg-gal">
+    <figure class="tg-gal-main"><img src="https://taigann.github.io/Katalog2026/img/medved-1.webp" alt="Бурый Медведь с лестницей и веслом" width="960" height="960" loading="lazy"><figcaption>Бурый Медведь с лестницей и веслом</figcaption>
+     <button type="button" class="tg-arr prev" aria-label="Предыдущее фото">&#8249;</button><button type="button" class="tg-arr next" aria-label="Следующее фото">&#8250;</button></figure>
+    <div class="tg-thumbs" style="--n:6"><button type="button" class="tg-th" aria-pressed="true" aria-label="Фото 1: Бурый Медведь с лестницей и веслом" data-src="https://taigann.github.io/Katalog2026/img/medved-1.webp" data-alt="Бурый Медведь с лестницей и веслом"><img src="https://taigann.github.io/Katalog2026/img/medved-1-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 2: Вид со стороны лестницы" data-src="https://taigann.github.io/Katalog2026/img/medved-2.webp" data-alt="Вид со стороны лестницы"><img src="https://taigann.github.io/Katalog2026/img/medved-2-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 3: Столик на опоре внутри чаши, опция" data-src="https://taigann.github.io/Katalog2026/img/medved-3.webp" data-alt="Столик на опоре внутри чаши, опция"><img src="https://taigann.github.io/Katalog2026/img/medved-3-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 4: Сиденья по кругу чаши" data-src="https://taigann.github.io/Katalog2026/img/medved-4.webp" data-alt="Сиденья по кругу чаши"><img src="https://taigann.github.io/Katalog2026/img/medved-4-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 5: Дымоход с логотипом ТАЙГА" data-src="https://taigann.github.io/Katalog2026/img/medved-5.webp" data-alt="Дымоход с логотипом ТАЙГА"><img src="https://taigann.github.io/Katalog2026/img/medved-5-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 6: Под термо-крышкой, опция" data-src="https://taigann.github.io/Katalog2026/img/medved-6.webp" data-alt="Под термо-крышкой, опция"><img src="https://taigann.github.io/Katalog2026/img/medved-6-t.webp" alt="" width="240" height="240" loading="lazy"></button></div>
+   </div>
+   <div class="tg-fbody">
+    <div class="tg-badge tg-badge--q">Флагман</div>
+    <h3 class="tg-mt">Чан «Бурый Медведь»</h3>
+    <p class="tg-mdesc">Сочетание выразительного дизайна, надёжной стальной конструкции и продуманной эргономики. Создан для комфортного парения в любое время года и становится центром зоны отдыха.</p>
+    <div class="tg-chips"><span>2–4 чел.</span><span>4–6 чел.</span><span>6–8 чел.</span><span>8–10 чел.</span></div>
+    <div class="tg-flist"><div class="tg-mli">Круглогодичное использование</div><div class="tg-mli">Дровяной нагрев, увеличенная печь</div><div class="tg-mli">Лестница на металлокаркасе, дымоход и весло в комплекте</div><div class="tg-mli">Монтаж по Нижегородской области в цене</div></div>
+    <div class="tg-fprice">от 160 000 ₽<small>до 280 000 ₽ за чан на 8–10 человек</small></div>
+    <a class="tg-btn" href="https://www.instagram.com/taiga.nn/" target="_blank" rel="noopener">Подобрать размер в директ</a>
+   </div>
+  </article>
+  <article class="tg-feat" aria-label="Чан «Алмаз»">
+   <div class="tg-gal">
+    <figure class="tg-gal-main"><img src="https://taigann.github.io/Katalog2026/img/almaz-1.webp" alt="Алмаз: восьмигранная чаша с сиденьями" width="960" height="960" loading="lazy"><figcaption>Алмаз: восьмигранная чаша с сиденьями</figcaption>
+     <button type="button" class="tg-arr prev" aria-label="Предыдущее фото">&#8249;</button><button type="button" class="tg-arr next" aria-label="Следующее фото">&#8250;</button></figure>
+    <div class="tg-thumbs" style="--n:6"><button type="button" class="tg-th" aria-pressed="true" aria-label="Фото 1: Алмаз: восьмигранная чаша с сиденьями" data-src="https://taigann.github.io/Katalog2026/img/almaz-1.webp" data-alt="Алмаз: восьмигранная чаша с сиденьями"><img src="https://taigann.github.io/Katalog2026/img/almaz-1-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 2: Лестница и весло в комплекте" data-src="https://taigann.github.io/Katalog2026/img/almaz-2.webp" data-alt="Лестница и весло в комплекте"><img src="https://taigann.github.io/Katalog2026/img/almaz-2-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 3: Сиденья внутри чаши" data-src="https://taigann.github.io/Katalog2026/img/almaz-3.webp" data-alt="Сиденья внутри чаши"><img src="https://taigann.github.io/Katalog2026/img/almaz-3-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 4: Алмаз на площадке у воды" data-src="https://taigann.github.io/Katalog2026/img/almaz-4.webp" data-alt="Алмаз на площадке у воды"><img src="https://taigann.github.io/Katalog2026/img/almaz-4-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 5: Под термо-крышкой, опция" data-src="https://taigann.github.io/Katalog2026/img/almaz-5.webp" data-alt="Под термо-крышкой, опция"><img src="https://taigann.github.io/Katalog2026/img/almaz-5-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 6: Основание с печью и топочной дверцей" data-src="https://taigann.github.io/Katalog2026/img/almaz-6.webp" data-alt="Основание с печью и топочной дверцей"><img src="https://taigann.github.io/Katalog2026/img/almaz-6-t.webp" alt="" width="240" height="240" loading="lazy"></button></div>
+   </div>
+   <div class="tg-fbody">
+    <div class="tg-badge tg-badge--q">Современная геометрия</div>
+    <h3 class="tg-mt">Чан «Алмаз»</h3>
+    <p class="tg-mdesc">Выразительная геометрия и лаконичный дизайн, вдохновлённый современной архитектурой. Чёткие грани и строгие формы позволяют вписать чан в любой ландшафтный проект.</p>
+    <div class="tg-chips"><span>2–4 чел.</span><span>4–6 чел.</span><span>6–8 чел.</span></div>
+    <div class="tg-flist"><div class="tg-mli">Увеличенный внутренний объём чаши</div><div class="tg-mli">Эргономичная глубина погружения</div><div class="tg-mli">Устойчивая многогранная конструкция</div><div class="tg-mli">Эффектное сочетание металла и дерева</div></div>
+    <div class="tg-fprice">от 185 000 ₽<small>до 240 000 ₽ за чан на 6–8 человек</small></div>
+    <a class="tg-btn" href="https://www.instagram.com/taiga.nn/" target="_blank" rel="noopener">Подобрать размер в директ</a>
+   </div>
+  </article>
+  <article class="tg-feat rev" aria-label="Чан «Тигр»">
+   <div class="tg-gal">
+    <figure class="tg-gal-main"><img src="https://taigann.github.io/Katalog2026/img/tigr-1.webp" alt="Тигр целиком" width="960" height="960" loading="lazy"><figcaption>Тигр целиком</figcaption>
+     <button type="button" class="tg-arr prev" aria-label="Предыдущее фото">&#8249;</button><button type="button" class="tg-arr next" aria-label="Следующее фото">&#8250;</button></figure>
+    <div class="tg-thumbs" style="--n:6"><button type="button" class="tg-th" aria-pressed="true" aria-label="Фото 1: Тигр целиком" data-src="https://taigann.github.io/Katalog2026/img/tigr-1.webp" data-alt="Тигр целиком"><img src="https://taigann.github.io/Katalog2026/img/tigr-1-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 2: Лестница на металлокаркасе и весло" data-src="https://taigann.github.io/Katalog2026/img/tigr-2.webp" data-alt="Лестница на металлокаркасе и весло"><img src="https://taigann.github.io/Katalog2026/img/tigr-2-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 3: Подъём в чан по лестнице" data-src="https://taigann.github.io/Katalog2026/img/tigr-3.webp" data-alt="Подъём в чан по лестнице"><img src="https://taigann.github.io/Katalog2026/img/tigr-3-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 4: Вид сбоку" data-src="https://taigann.github.io/Katalog2026/img/tigr-4.webp" data-alt="Вид сбоку"><img src="https://taigann.github.io/Katalog2026/img/tigr-4-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 5: Сиденья внутри чаши" data-src="https://taigann.github.io/Katalog2026/img/tigr-5.webp" data-alt="Сиденья внутри чаши"><img src="https://taigann.github.io/Katalog2026/img/tigr-5-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 6: Термометр, опция" data-src="https://taigann.github.io/Katalog2026/img/tigr-6.webp" data-alt="Термометр, опция"><img src="https://taigann.github.io/Katalog2026/img/tigr-6-t.webp" alt="" width="240" height="240" loading="lazy"></button></div>
+   </div>
+   <div class="tg-fbody">
+    <div class="tg-badge tg-badge--q">Для большой компании</div>
+    <h3 class="tg-mt">Чан «Тигр»</h3>
+    <p class="tg-mdesc">Создан для тех, кто любит проводить время в кругу семьи и друзей. Увеличенный объём чаши даёт больше внутреннего пространства, несколько человек размещаются свободно.</p>
+    <div class="tg-chips"><span>4–6 чел.</span><span>6–8 чел.</span></div>
+    <div class="tg-flist"><div class="tg-mli">Больше пространства внутри чаши</div><div class="tg-mli">Каждому хватает места для полноценного отдыха</div><div class="tg-mli">Массивный силуэт премиум-класса</div><div class="tg-mli">Подходит для глэмпингов и баз отдыха</div></div>
+    <div class="tg-fprice">от 210 000 ₽<small>до 240 000 ₽ за чан на 6–8 человек</small></div>
+    <a class="tg-btn" href="https://www.instagram.com/taiga.nn/" target="_blank" rel="noopener">Подобрать размер в директ</a>
+   </div>
+  </article>
+  <article class="tg-feat" aria-label="Гриль-стол ТАЙГА">
+   <div class="tg-gal">
+    <figure class="tg-gal-main"><img src="https://taigann.github.io/Katalog2026/img/grill-1.webp" alt="Гриль-стол на участке" width="960" height="960" loading="lazy"><figcaption>Гриль-стол на участке</figcaption>
+     <button type="button" class="tg-arr prev" aria-label="Предыдущее фото">&#8249;</button><button type="button" class="tg-arr next" aria-label="Следующее фото">&#8250;</button></figure>
+    <div class="tg-thumbs" style="--n:4"><button type="button" class="tg-th" aria-pressed="true" aria-label="Фото 1: Гриль-стол на участке" data-src="https://taigann.github.io/Katalog2026/img/grill-1.webp" data-alt="Гриль-стол на участке"><img src="https://taigann.github.io/Katalog2026/img/grill-1-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 2: Гриль-зона в столешнице" data-src="https://taigann.github.io/Katalog2026/img/grill-2.webp" data-alt="Гриль-зона в столешнице"><img src="https://taigann.github.io/Katalog2026/img/grill-2-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 3: Гриль-стол у дома" data-src="https://taigann.github.io/Katalog2026/img/grill-3.webp" data-alt="Гриль-стол у дома"><img src="https://taigann.github.io/Katalog2026/img/grill-3-t.webp" alt="" width="240" height="240" loading="lazy"></button><button type="button" class="tg-th" aria-pressed="false" aria-label="Фото 4: Мангал и дымоход крупно" data-src="https://taigann.github.io/Katalog2026/img/grill-4.webp" data-alt="Мангал и дымоход крупно"><img src="https://taigann.github.io/Katalog2026/img/grill-4-t.webp" alt="" width="240" height="240" loading="lazy"></button></div>
+   </div>
+   <div class="tg-fbody">
+    <div class="tg-badge tg-badge--q">Мангальная зона</div>
+    <h3 class="tg-mt">Гриль-стол ТАЙГА</h3>
+    <p class="tg-mdesc">Премиальная мебель и полноценная зона приготовления пищи в одном. Встроенная гриль-зона позволяет готовить прямо за столом, не отвлекаясь от общения с гостями.</p>
+    <div class="tg-chips"><span>2000 × 1200 мм</span><span>2400 × 1200 мм</span></div>
+    <div class="tg-flist"><div class="tg-mli">Обеденная зона, мангал и место отдыха в одном</div><div class="tg-mli">Экономит пространство на участке</div><div class="tg-mli">Надёжная металлическая конструкция</div><div class="tg-mli">Для домов, банных комплексов и глэмпингов</div></div>
+    <div class="tg-fprice">от 190 000 ₽<small>210 000 ₽ за стол 2400 × 1200 мм</small></div>
+    <a class="tg-btn" href="https://www.instagram.com/taiga.nn/" target="_blank" rel="noopener">Узнать срок в директ</a>
+   </div>
+  </article>
  </div></div>
 
  <div class="tg-sec"><div class="tg-w">
@@ -186,14 +235,14 @@ font-weight:700;padding:0 16px 12px;border-bottom:1px solid rgba(245,241,234,.18
  </div></div>
 </div>
 <script>
-(function(){var r=document.getElementById('tg-dach');if(!r)return;
-var m=r.querySelector('.tg-gal-main img'),c=r.querySelector('.tg-gal-main figcaption'),th=[].slice.call(r.querySelectorAll('.tg-th')),cur=0;
+(function(){[].forEach.call(document.querySelectorAll('.tg-feat'),function(r){
+var m=r.querySelector('.tg-gal-main img'),c=r.querySelector('.tg-gal-main figcaption'),th=[].slice.call(r.querySelectorAll('.tg-th')),cur=0;if(!m||!th.length)return;
 function go(i){cur=(i+th.length)%th.length;var b=th[cur];th.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
 m.classList.add('ld');m.onload=function(){m.classList.remove('ld')};m.src=b.getAttribute('data-src');m.alt=b.getAttribute('data-alt');c.textContent=b.getAttribute('data-alt');}
 th.forEach(function(b,i){b.addEventListener('click',function(){go(i)})});
 r.querySelector('.tg-arr.prev').addEventListener('click',function(){go(cur-1)});
 r.querySelector('.tg-arr.next').addEventListener('click',function(){go(cur+1)});
-var x0=null;m.parentNode.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
-m.parentNode.addEventListener('touchend',function(e){if(x0===null)return;var d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40)go(cur+(d<0?1:-1));x0=null});
-})();
+var x0=null,f=m.parentNode;f.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+f.addEventListener('touchend',function(e){if(x0===null)return;var d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>40)go(cur+(d<0?1:-1));x0=null});
+});})();
 </script>
